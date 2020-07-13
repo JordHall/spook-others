@@ -7,29 +7,42 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    int count = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Components
-        final Button button = findViewById(R.id.btnSpook);
-        final TextView txtOutput = findViewById(R.id.txtOutput);
-        final Button resetBtn = findViewById(R.id.btnReset);
-        //Spook button onClick
-        button.setOnClickListener(new View.OnClickListener() {
+        final TextView txtTest = findViewById(R.id.txtTest);
+        final Button btnSound1 = findViewById(R.id.btnSound1);
+        final Button btnSound2 = findViewById(R.id.btnSound2);
+        final Button btnSound3 = findViewById(R.id.btnSound3);
+        final Button btnSound4 = findViewById(R.id.btnSound4);
+        //Sound 1 button onClick
+        btnSound1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                count++;
-                txtOutput.setText(String.valueOf(count));
+                txtTest.setText(R.string.sound1);
             }
         });
-        //Reset button onClick
-        resetBtn.setOnClickListener(new View.OnClickListener() {
+        //Sound 2 button onClick
+        btnSound2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                count = 0;
-                txtOutput.setText("0");
+                txtTest.setText(R.string.sound2);
+            }
+        });
+        //Sound 3 button onClick
+        btnSound3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtTest.setText(R.string.sound3);
+            }
+        });
+        //Sound 4 button onClick
+        btnSound4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtTest.setText(R.string.sound4);
             }
         });
     }

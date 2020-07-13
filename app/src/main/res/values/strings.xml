@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">SpookOthers</string>
-    <string name="test_btn">Spook</string>
-    <string name="test_txt">0</string>
-    <string name="reset_btn">Reset</string>
+    <string name="app_name">Spook Others</string>
+    <string name="test">Test</string>
+    <string name="sound1">Ghost noise</string>
+    <string name="sound2">Haunted house</string>
+    <string name="sound3">Footsteps</string>
+    <string name="sound4">Scream</string>
 </resources>
