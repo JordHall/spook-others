@@ -1,5 +1,6 @@
 package com.jordhall.spookothers;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,11 +18,13 @@ public class MainActivity extends AppCompatActivity {
         final Button btnSound2 = findViewById(R.id.btnSound2);
         final Button btnSound3 = findViewById(R.id.btnSound3);
         final Button btnSound4 = findViewById(R.id.btnSound4);
+        final MediaPlayer sounds = MediaPlayer.create(this, R.raw.test);
         //Sound 1 button onClick
         btnSound1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 txtTest.setText(R.string.sound1);
+                sounds.start();
             }
         });
         //Sound 2 button onClick
