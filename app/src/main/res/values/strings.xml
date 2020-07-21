@@ -5,4 +5,5 @@
     <string name="sound2">Haunted house</string>
     <string name="sound3">Footsteps</string>
     <string name="sound4">Scream</string>
+    <string name="bluetooth_btn">Connect Speaker</string>
 </resources>

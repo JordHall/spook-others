@@ -13,12 +13,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Components
+        final Button btnConnect = findViewById(R.id.btnBluetooth);
         final TextView txtTest = findViewById(R.id.txtTest);
         final Button btnSound1 = findViewById(R.id.btnSound1);
         final Button btnSound2 = findViewById(R.id.btnSound2);
         final Button btnSound3 = findViewById(R.id.btnSound3);
         final Button btnSound4 = findViewById(R.id.btnSound4);
         final MediaPlayer sounds = MediaPlayer.create(this, R.raw.test);
+        //Connect speaker onClick
+        btnConnect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtTest.setText("Connecting to speaker");
+            }
+        });
         //Sound 1 button onClick
         btnSound1.setOnClickListener(new View.OnClickListener() {
             @Override
